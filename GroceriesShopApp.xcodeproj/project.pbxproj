@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		41645ABA2D3566BA008D9ED5 /* CountryPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 41645AB92D3566BA008D9ED5 /* CountryPicker */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		41F978CB2D32BFD7003EDFDF /* GroceriesShopApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroceriesShopApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -36,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41645ABA2D3566BA008D9ED5 /* CountryPicker in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,7 @@
 			);
 			name = GroceriesShopApp;
 			packageProductDependencies = (
+				41645AB92D3566BA008D9ED5 /* CountryPicker */,
 			);
 			productName = GroceriesShopApp;
 			productReference = 41F978CB2D32BFD7003EDFDF /* GroceriesShopApp.app */;
@@ -107,6 +113,9 @@
 			);
 			mainGroup = 41F978C22D32BFD7003EDFDF;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				41645AB82D3566BA008D9ED5 /* XCRemoteSwiftPackageReference "CountryPicker" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 41F978CC2D32BFD7003EDFDF /* Products */;
 			projectDirPath = "";
@@ -349,6 +358,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		41645AB82D3566BA008D9ED5 /* XCRemoteSwiftPackageReference "CountryPicker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mobven/CountryPicker.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		41645AB92D3566BA008D9ED5 /* CountryPicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 41645AB82D3566BA008D9ED5 /* XCRemoteSwiftPackageReference "CountryPicker" */;
+			productName = CountryPicker;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 41F978C32D32BFD7003EDFDF /* Project object */;
 }
