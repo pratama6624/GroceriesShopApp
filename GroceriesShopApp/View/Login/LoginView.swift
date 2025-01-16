@@ -24,9 +24,7 @@ struct LoginView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 40)
-                
-                Spacer()
-                    .frame(height: .screenWidth * 0.12)
+                    .padding(.bottom, .screenWidth * 0.1)
                 
                 Text("Loging")
                     .font(.customfont(.semibold, fontSize: 26))
@@ -44,6 +42,32 @@ struct LoginView: View {
                     .padding(.bottom, .screenWidth * 0.07)
                 
                 LineSecureField(title: "Password", placeholder: "Enter your password", txt: $loginViewModel.txtPassword, isShowPassword: $loginViewModel.isSHowPassword)
+                    .padding(.bottom, .screenWidth * 0.02)
+                
+                Button {
+                    
+                } label: {
+                    Text("Forgot Password")
+                        .font(.customfont(.medium, fontSize: 14))
+                        .foregroundStyle(Color.primaryText)
+                }
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
+                .padding(.bottom, .screenWidth * 0.05)
+                
+                RoundButton(title: "Login") {
+                    
+                }
+                .padding(.bottom, .screenWidth * 0.05)
+                
+                HStack {
+                    Text("Dont have an account?")
+                        .font(.customfont(.semibold, fontSize: 14))
+                        .foregroundStyle(Color.primaryText)
+                    
+                    Text("Signup")
+                        .font(.customfont(.semibold, fontSize: 14))
+                        .foregroundStyle(Color.primaryApp)
+                }
                 
                 Spacer()
             }

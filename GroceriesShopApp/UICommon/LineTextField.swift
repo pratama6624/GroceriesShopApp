@@ -13,7 +13,6 @@ struct LineTextField: View {
     @State var placeholder: String = "Placeholder"
     @Binding var txt: String
     @State var keyboardType: UIKeyboardType = .default
-    @State var isPassword: Bool = false
     
     var body: some View {
         VStack {
@@ -22,12 +21,10 @@ struct LineTextField: View {
                 .foregroundStyle(Color.textTitle)
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
             
-            if(isPassword) {
-                SecureField(placeholder, text: $txt)
-            } else {
-                TextField(placeholder, text: $txt)
-                    .keyboardType(keyboardType)
-            }
+            TextField(placeholder, text: $txt)
+                .keyboardType(keyboardType)
+                .autocorrectionDisabled(true)
+                .frame(height: 40)
             
             Divider()
         }
@@ -50,10 +47,13 @@ struct LineSecureField: View {
             
             if(isShowPassword) {
                 TextField(placeholder, text: $txt)
+                    .autocorrectionDisabled(true)
                     .modifier( ShowButton(isShow: $isShowPassword) )
+                    .frame(height: 40)
             } else {
                 SecureField(placeholder, text: $txt)
                     .modifier( ShowButton(isShow: $isShowPassword) )
+                    .frame(height: 40)
             }
             
             Divider()
